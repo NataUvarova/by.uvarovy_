@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>by.uvarovy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Шапка -->
+  <header>
+    <div class="con">
+      
+      <p><a href="nata.uvarova.1982@gmail.com">Email</a> <a href="t.me/by_Uvarovy">Telegram</a> <a href="https://www.instagram.com/uvarovy.handmade/profilecard/?igsh=cGsxeG9wajZxdXFx">Instagram</a></p><br>
+      <p>Tel.+380678915787</p><br>
+    </div>
+    <div class="logo">by.uvarovy 🕯️</div>
+    <nav>
+      <a href="#home">Головна</a>
+      <a href="#catalog">Каталог</a>
+      <a href="about.html">Про нас</a>
+      <a href="#contacts">Контакти</a>
+      <button id="open-cart-btn" aria-label="Відкрити кошик">Кошик</button>
+    </nav>
+  </header>
+
+  <!-- Головна сторінка -->
+  <section id="home" class="hero">
+    <h1>Запали світло, та сяй! 🔥</h1>
+    <p>Цей сайт - про створення свічок, які дарують затишок, спокій і гармонію.
+Ми створюємо свічки вручну з натурального бджолиного та соєвого воску, використовуючи лише екологічно чисті матеріали та додаючи частинку душі в кожен вогник.
+Ця справа народилася з любові до природи, традицій і простих, але справжніх речей. Бджолиний віск ми отримуємо з українських пасік, а соєвий віск — сертифікований, безпечний і веганський.
+Кожна свічка — це маленький витвір мистецтва, що передає  тепло, та  несе спокій у дім, очищає простір і створює особливу атмосферу.
+
+Цей проєкт для нас — не просто ремесло. Це шлях. Шлях до себе, до природи, до домашнього затишку та народних традицій.
+Дякуємо, що обрали цю подорож з нами та підтримуєте українського виробника.🌿
+
+</p>
+  </section>
+
+  </section>
+  <section class="daily-products">
+  <h2>Товари дня</h2>
+  <div class="daily-products-slider" id="daily-products-slider">
+    <!-- Товари дня будуть додані через JS -->
+  </div>
+</section>
+
+  <!-- Каталог -->
+  <section id="catalog">
+    <h2>Каталог</h2>
+    <div class="filters">
+      <button class="filter-btn" data-category="all">Всі</button>
+      <button class="filter-btn" data-category="bee">Свічки з бджолиного воску</button>
+      <button class="filter-btn" data-category="soya">Свічки з соєвого воску</button>
+      <button class="filter-btn" data-category="vosk">Свічки з вощини</button>
+      <button class="filter-btn" data-category="etno">Етно-стиль</button>
+      <button class="filter-btn" data-category="bracelet">Столові свічки</button>
+    </div>
+
+    <div class="product-grid">
+      <!-- Приклади товарів -->
+
+      <!-- Свічки з бджолиного воску -->
+      <div class="product-card" data-category="bee">
+        <img src="Vishivanka.jpg" alt="Свічка 'Вишиванка'"/>
+        <h3>Свічка 'Вишиванка'</h3>
+        <p class="price">₴180</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+      <div class="product-card" data-category="bee">
+        <img src="Kalina.jpg" alt="Свічка 'Калина'" />
+        <h3>Свічка 'Калина'</h3>
+        <p class="price">₴180</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+
+      <!-- Свічки з соєвого воску -->
+      <div class="product-card" data-category="soya">
+        <img src="Kazkova_feyeria.jpg" alt="Свічка 'Казкова феєрія' (мала)" />
+        <h3>Свічка 'Казкова феєрія' (мала)</h3>
+        <p class="price">₴170</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+      <div class="product-card" data-category="soya">
+        <img src="Nabir.jpg" alt="Набір з 2х свічок 'Казкова феєрія'(мала)" />
+        <h3>Набір з 2х свічок 'Казкова феєрія'(мала)</h3>
+        <p class="price">₴350</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+      <div class="product-card" data-category="soya">
+        <img src="Kazkova_feyeria_big.jpg" alt="Свічка 'Казкова феєрія'(велика)" />
+        <h3>Свічка 'Казкова феєрія'(велика)</h3>
+        <p class="price">₴320</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+
+      <!-- Свічки з вощини -->
+      <div class="product-card" data-category="vosk">
+        <img src="Medova.jpg" alt="Свічка з вощини 'Медова'" />
+        <h3>Свічка з вощини 'Медова'</h3>
+        <p class="price">₴100</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+      <div class="product-card" data-category="vosk">
+        <img src="Medova1.jpg" alt="Свічка 'Медова'(біла)" />
+        <h3>Свічка 'Медова'(біла)</h3>
+        <p class="price">₴100</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+
+      <!-- Етно стиль -->
+      <div class="product-card" data-category="etno">
+        <img src="gai.jpg" alt="Свічка 'Гаї шумлять'" />
+        <h3>Свічка 'Гаї шумлять'</h3>
+        <p class="price">₴180</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+      <div class="product-card" data-category="etno">
+        <img src="Petrikivka.jpg" alt="Свічка 'Петриківський розпис'" />
+        <h3>Свічка 'Петриківський розпис'</h3>
+        <p class="price">₴250</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+      <div class="product-card" data-category="etno">
+        <img src="Sonyashnic.png" alt="Свічка 'Соняшник'" />
+        <h3>Свічка 'Соняшник'</h3>
+        <p class="price">₴250</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+
+      <!-- Столові свічки -->
+      <div class="product-card" data-category="bracelet">
+        <img src="stolova_bee.jpg" alt="Столова свічка (бджолиний віск)" />
+        <h3>Столова свічка (бджолиний віск)</h3>
+        <p class="price">₴70</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+      <div class="product-card" data-category="bracelet">
+        <img src="stolova_soya.jpg" alt="Столова свічка (соєвий віск)" />
+        <h3>Столова свічка (соєвий віск)</h3>
+        <p class="price">₴70</p>
+        <button class="add-to-cart">Додати в кошик</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Контакти -->
+  <footer id="contacts">
+    <h2>Контакти</h2>
+    <p>Email:nata.uvarova.1982@gmail.com</p><br>
+    <p>Tel.+380678915787</p><br>
+    <p><a href="uvarovy.handmade">Instagram</a> <a href ="https://www.facebook.com/natali.uvarova.16">Facebook</a> <a href="https://www.tiktok.com/@uvarovy.handmade?_t=ZM-8wld8ZFHdeo&_r=1">Tik-Tok</a> <a href="t.me/by_Uvarovy">Telegram</a></p>
+  </footer>
+
+  <!-- Випливаючий кошик -->
+  <div id="cart" class="cart hidden" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <h3 id="cart-title">Кошик</h3>
+    <ul id="cart-items"></ul>
+    <p>Разом: <span id="cart-total">₴0</span></p>
+    <button id="close-cart">Закрити</button>
+    <button id="checkout-btn">Сплатити</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

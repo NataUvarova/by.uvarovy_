@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fcdc8b;
+  color: #573901;
+  line-height: 1.4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Шапка */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  transform: scale(1);
+  background-image:linear-gradient(to right,#fbeecd,#faeedf,#fbecb0);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: default;
+  margin-left: 0px;
+}
+.logo:hover{
+  transform: scale(1.6);
+  transition: 1s linear;
+  color:#563201;
+}
+nav a,
+#open-cart-btn {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #bb7c35;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+#open-cart-btn:hover {
+  color: #5c3203;
+}
+
+/* Головний блок */
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f3dd8d;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #673904;
+}
+
+/* Слайдшоу Товарів дня */
+.daily-products {
+  padding: 2rem 2rem 0 2rem;
+  background-color: #fbecb0;
+  margin-bottom: 2rem;
+}
+
+.daily-products h2 {
+  margin-bottom: 1rem;
+}
+
+.daily-products-slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.daily-products-slider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.daily-products-slider::-webkit-scrollbar-thumb {
+  background: #563201;
+  border-radius: 3px;
+}
+
+/* Каталог */
+
+#catalog {
+  padding: 0 2rem 2rem 2rem;
+  flex-grow: 1;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #552f06b9;
+  background: none;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 6px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #5f3304b9;
+  color: #fff;
+}
+
+/* Карти товарів - ширина на всю довжину + адаптивність */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px rgba(188, 132, 11, 0.1);
+  transform: scale(1.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
+  
+}
+
+.product-card:hover img {
+  filter: brightness(85%);
+  z-index: 0;
+}
+
+.product-card h3 {
+  margin: 0.6rem 0 0.3rem 0;
+  font-weight: 700;
+}
+
+.product-card .price {
+  color: #555;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.add-to-cart {
+  background: #624202;
+  color: #fff;
+  padding: 0.6rem 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.add-to-cart:hover {
+  background: #724503;
+}
+
+/* Футер */
+footer {
+  background-color: #fbecb0;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+
+/* Кошик */
+
+.cart {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  background: #fff;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  width: 280px;
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#cart-items {
+  list-style: none;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 40vh;
+  padding-right: 0.5rem;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0.1rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.cart-item-name {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-item-price {
+  margin-right: 0.5rem;
+  color: #666;
+}
+
+.remove-item-btn {
+  background: none;
+  border: none;
+  color: #b00;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0 0.3rem;
+}
+
+#close-cart,
+#checkout-btn {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+#close-cart {
+  background: #faab3d;
+  color: #fff;
+}
+
+#close-cart:hover {
+  background: #f3e08e;
+  color:#563201;
+}
+
+#checkout-btn {
+  background: #693f01;
+  color: #fff;
+  margin-top: 0.5rem;
+}
+
+#checkout-btn:hover {
+  background: #f3e08e;
+  color:#563201;
+}
+footer a {
+  background: #624202;
+  color: #fff;
+  padding: 0.6rem 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+#checkout-form {
+  
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border:1px solid #563201;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: background 0.3s ease;
+
+}
+#checkout-form  button{
+  background: #624202;
+  color: #fff;
+  padding: 0.6rem 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.con a{
+  background: #f8e8c8;
+  color: #573901;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid #573901;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-radius:10px;
+  font-weight: 600;
+}
